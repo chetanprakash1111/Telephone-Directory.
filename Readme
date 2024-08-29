@@ -1,0 +1,56 @@
+# Telephone Directory Application
+
+This is a simple C++ console-based application that simulates a telephone directory. The application allows you to manage contacts by adding, searching, displaying, deleting, and saving them to or loading them from a file.
+
+## Features
+
+- **Add Person Contact**: Add a new personal contact with a name, phone number, and address.
+- **Add Business Contact**: Add a new business contact with a name, phone number, and company name.
+- **Search Contact**: Search for a contact by name and view their details.
+- **Display Contacts**: Display all contacts in the directory.
+- **Delete Contact**: Delete a contact by name.
+- **Save Contacts to File**: Save all contacts to a file for persistence.
+- **Load Contacts from File**: Load contacts from a file to restore previous data.
+
+## Classes and Design
+
+- **Contact (Abstract Base Class)**: 
+  - Represents a general contact with a name and phone number.
+  - Pure virtual function `display()` to ensure derived classes implement it.
+
+- **Person (Derived Class)**:
+  - Inherits from `Contact`.
+  - Adds an address attribute.
+  - Overrides the `display()` function to show the contact's details.
+
+- **Business (Derived Class)**:
+  - Inherits from `Contact`.
+  - Adds a company name attribute.
+  - Overrides the `display()` function to show the contact's details.
+
+- **TelephoneDirectory**:
+  - Manages a collection of `Contact` objects using a `map` data structure.
+  - Provides methods to add, search, display, delete, save, and load contacts.
+
+## Getting Started
+
+### Prerequisites
+
+To run this application, you need:
+
+- A C++ compiler (e.g., g++, clang++)
+- Basic knowledge of C++ and command line operations
+
+### Running the Application
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/telephone-directory.git
+   cd telephone-directory
+
+2. **Run Application:**
+   ./TelephoneDirectory
+
+3. **Compile the Code:**
+   g++ -o TelephoneDirectory main.cpp -std=c++11
